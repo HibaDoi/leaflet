@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="leaflet.css" />
+<script src="leaflet.js"></script>
+    </head>
+<body>
+
+<div id="map" style="width: 800px; height: 600px;"></div>
+<script>
+    var map = L.map('map').setView([33.707521
+, -7.396475], 16
+);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var marker = L.marker([33.6995086
+, -7.3848547]).addTo(map).bindPopup('Hello Mohammedia');
+
+
+
+
+
+
+var circle = L.circle([33.647078
+, -7.377898], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
+
+
+
+var polygon = L.polygon([
+[33.707521
+, -7.396475],
+[33.707183
+, -7.395934],
+[33.704002
+, -7.398877],
+[33.704332
+, -7.399414]
+]).addTo(map);
+</script>
+
+
+</body>
+</html>
